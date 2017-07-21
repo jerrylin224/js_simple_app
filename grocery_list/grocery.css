@@ -66,3 +66,11 @@ h1 {
   -webkit-margin-end: 0px;
   font-weight: bold;
 }
+
+li {
+  padding: 10px;
+}
+
+li + li {
+  border-top: 1px solid #ececec;
+}
