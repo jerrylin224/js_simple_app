@@ -13,13 +13,14 @@ figure {
   margin: auto;
 }
 
-.mySlides {
+/*.mySlides {
+  display: none;
+}
+*/
+figure + figure {
   display: none;
 }
 
-.active {
-  display: block;
-}
 
 .prev,
 .next {
