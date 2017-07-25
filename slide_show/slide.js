@@ -10,54 +10,46 @@
 
 $(function() {
   var $mySlides = $('.mySlides'),
-      lastIdx = $mySlides.length - 1;
+      lastIdx = $mySlides.length - 1,
+      currentIdx;
 
+  $('#nextSlide').click(function() {
+    next();
+  });
 
-  $(".slideshow-container").on('click', '.slide', function(e) {
-    var currentIdx = +$('.active').attr('id') - 1;
-
-    if (e.target.classList.contains("next"))  {
-        $mySlides.stop().filter(":visible").fadeOut(300);
-        $('.active').removeClass('active');
-      if (currentIdx != lastIdx) {
-        $('.mySlides').eq(currentIdx + 1).addClass('active').delay(300).fadeIn(300);
-      } else {
-        $('.mySlides').eq(0).addClass('active').delay(300).fadeIn(300);
-      }
-    } else if (e.target.classList.contains("prev")) {
-        $mySlides.stop().filter(":visible").fadeOut(300);
-        $('.active').removeClass('active');
-        if (currentIdx != 0) {
-          $('.mySlides').eq(currentIdx - 1).addClass('active').delay(300).fadeIn(300);
-        } else {
-          $('.mySlides').eq(lastIdx).addClass('active').delay(300).fadeIn(300);
-        }
-    }
-
+  $('#prevSlide').click(function() {
+    prev();
   })
+
+  function fadeOutAndRemoveActiveClass() {
+    $mySlides.stop().filter(":visible").fadeOut(300);
+    $('.active').removeClass('active');
+  }
+
+  function next() {
+    currentIdx = +$('.active').attr('id') - 1;
+
+    fadeOutAndRemoveActiveClass()
+
+    if (currentIdx != lastIdx) {
+      $('.mySlides').eq(currentIdx + 1).addClass('active').delay(300).fadeIn(300);
+    } else {
+      $('.mySlides').eq(0).addClass('active').delay(300).fadeIn(300);
+    }
+  }
+
+  function prev() {
+    currentIdx = +$('.active').attr('id') - 1;
+
+    fadeOutAndRemoveActiveClass()
+
+    if (currentIdx != 0) {
+        $('.mySlides').eq(currentIdx - 1).addClass('active').delay(300).fadeIn(300);
+    } else {
+      $('.mySlides').eq(lastIdx).addClass('active').delay(300).fadeIn(300);
+    }
+  }
 });
 
-// 確認一下contain的用法
-// 我這樣用不會太麻煩嗎？
-
-// 參考w3c slide
-
-
-      // $(function() {
-      //   var $slideshow = $("#slideshow"),
-      //       $nav = $slideshow.find("ul");
-
-
-      //   $("main ul").on('click', 'a', function(e) {
-      //     e.preventDefault();
-      //     var $li = $(e.currentTarget).closest('li');
-      //     var idx = $li.index();
-
-      //     $mySlides.find("figure").stop().filter(":visible").fadeOut(300);
-      //     $mySlides.find("figure").eq(idx).delay(300).fadeIn(300);
-      //     $nav.find(".active").removeClass("active");
-      //     $li.addClass("active");
-      //   });
-      // });
-
-// 7.24問題：無法有效的產生fade-in/fade-out的效果
+// 重點是不要用active來控制display or none，單純用active來得到該element的id值
+// 可以利用attr() 這個method得到id值 $('.active').attr('id')

@@ -13,17 +13,14 @@ figure {
   margin: auto;
 }
 
-/*.mySlides {
-  display: none;
-}
-*/
 figure + figure {
   display: none;
 }
 
 
-.prev,
-.next {
+
+#prevSlide,
+#nextSlide {
   cursor: pointer;
   position: absolute;
   top: 50%;
@@ -37,10 +34,10 @@ figure + figure {
   border-radius: 0 3px 3px 0;
 }
 
-.prev {
+#prevSlide {
   left: 0%;
 }
 
-.next {
+#nextSlide {
   right: 0%;
 }
