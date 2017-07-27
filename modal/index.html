@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Document</title>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <link rel="stylesheet" href="modal.css">
+  <script src="modal.js"></script>
+</head>
+<body>
+  <main>
+    <div class="container">
+      <ul>
+        <li>
+          <a href="#">
+            <img src="https://dummyimage.com/600x400/ededed/000000&text=Masayoshi+Son" alt="">
+          </a>
+          <div class="modal_layer"></div>
+          <div class="modal">
+            <a href="#" class="close"></a>
+            <img src="https://dummyimage.com/600x400/ededed/000000&text=Masayoshi+Son" alt="">
+          </div>
+        </li>
+        <li>
+          <a href="#">
+            <img src="https://dummyimage.com/600x400/e61ee6/000000&text=Inamori+Kazuo" alt=""> 
+          </a>
+          <div class="modal_layer"></div>
+          <div class="modal">
+            <a href="#" class="close"></a>
+            <img src="https://dummyimage.com/600x400/e61ee6/000000&text=Inamori+Kazuo" alt=""> 
+          </div>
+        </li>
+        <li>
+          <a href="#">
+            <img src="https://dummyimage.com/600x400/3250b3/000000&text=Matsushita+K%C5%8Dnosuke" alt=""> 
+          </a>
+          <div class="modal_layer"></div>
+          <div class="modal">
+            <a href="#" class="close"></a>
+            <img src="https://dummyimage.com/600x400/3250b3/000000&text=Matsushita+K%C5%8Dnosuke" alt=""> 
+          </div>
+        </li>
+        <li>
+          <a href="#">
+            <img src="https://dummyimage.com/600x400/000000/ffffff&text=Morita+Akio" alt="">
+          </a>
+          <div class="modal_layer"></div>
+          <div class="modal">
+            <a href="#" class="close"></a>
+            <img src="https://dummyimage.com/600x400/000000/ffffff&text=Morita+Akio" alt="">
+          </div>
+        </li>
+      </ul>
+    </div>
+  </main>
+</body>
+</html>
+<!-- 這邊的重點是
+1. Anchor包覆img
+2. modal_layer 跟modal是anchor的siblings
+3. 要顯示的內容都包覆在modal中
+ -->

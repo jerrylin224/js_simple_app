@@ -1,0 +1,63 @@
+main {
+  margin: 100px auto;
+}
+
+ul {
+  text-align: center;
+}
+
+li {
+  display: inline-block;
+  width: 20%;
+  padding: 0 10px;
+}
+
+ul li img {
+  width: 100%;
+}
+
+.modal_layer {
+  display: none;
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 2;
+  background: #B2B2B2;
+}
+
+.modal {
+  display: none;
+  height: 400px;
+  padding: 100px 0 0 0;
+  top: 25%;
+  left: 50%;
+  position: absolute;
+  z-index: 3;
+  background: #fff;
+  margin-left: -300px;
+  box-sizing: border-box;
+}
+
+.modal > img {
+  width: 50%;
+}
+
+.modal a.close {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  z-index: 1;
+  width: 30px;
+  height: 30px;
+  text-align: left;
+  background: transparent url("https://cdn4.iconfinder.com/data/icons/ionicons/512/icon-close-32.png") 0 0 no-repeat;
+}
+
+a {
+  text-decoration: none;
+  color: #3e59b2;
+}
+
+/* absolute 可以蓋在fixed之上 */
