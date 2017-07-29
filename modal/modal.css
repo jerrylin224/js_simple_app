@@ -61,3 +61,7 @@ a {
 }
 
 /* absolute 可以蓋在fixed之上 */
+/* 這邊modal顯示的css已調整好，所以不需要用js調整
+   主要是modal、a.class還有modal_layer三者的z-index跟position
+   modal_layer要整個覆蓋頁面的話把上下左右都調成0，z-index調最高
+ */
