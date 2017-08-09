@@ -1,0 +1,22 @@
+
+    body {
+      background:#fff
+      font-size:13px;
+    }
+    #wrap {
+      position:relative;
+      width:220px;
+      margin:50px auto 0;
+    }
+    #header{position:relative;line-height:1em;}
+    .filterform {
+      width:220px;
+      font-size:12px;
+      display:block;
+    }
+    .filterform input {
+      -moz-border-radius:5px;
+      border-radius:5px;
+      -webkit-border-radius:5px;
+    }
+   

@@ -1,0 +1,108 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8"/>
+    <title>Contact Manager Practice</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.5/handlebars.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="javascript/manager.js">
+    </script>
+    <link href="stylesheets/manager.css" rel="stylesheet"/>
+  </head>
+  <body>
+    <header>
+    <h1> Contact Manager</h1>
+    <h3>Using JavaScript, Localstorage, Handlebar, jQuery</h3>
+    </header>
+    <main>
+      <section class="menu">
+        <div id="add">
+          <p>
+          add contact
+          </p>
+        </div>
+        <div id="search">
+          <input name="" type="search" value=""/ placeholder="search">
+        </div>
+        <div id="tags">
+          <p>
+          </p>
+        </div>
+      </section>
+      <section class="contact">
+      </section>
+      <form action="" method="post" id="create">
+        <h4>Create Contact</h4>
+        <input name="id" type="hidden" value=""/>
+        <fieldset>
+          <label for="name">Full name:</label>
+          <input type="text" name="name" value="" />
+        </fieldset>
+        <fieldset>
+          <label for="mail">Email address:</label>
+          <input name="mail" type="email" value=""/>
+        </fieldset>
+        <fieldset>
+          <label for="phone">Telephone number:</label>
+          <input name="phone" type="tel" value=""/>
+        </fieldset>
+        <fieldset>
+          <label for="tag">Tags: </label>
+          <input name="tag" type="input" value=""/>
+        </fieldset>
+        <fieldset>
+          <input name="" type="button" id="submit" value="Submit"/>
+          <input name="" type="button" id="cancel" value="Cancel"/>
+        </fieldset>
+      </form>
+    </main>
+    <footer>
+      Course 249 practice @<a href="#">LaunchSchool</a>
+
+      <input name="" type="button" value="display all"/>
+    </footer>
+  </body>
+
+  <script id="displayContact" type="text/x-handlebars-template">
+        <div class="display" id={{id}}>
+          <h4>{{fullname}}</h4>
+          <h5>Phone Number:</h5>
+          <p>{{phone}}</p>
+          <h5>Email:</h5>
+          <p>{{email}}</p>
+          <h5>Tags:</h5>
+          <p>
+            {{#each tags}}
+            <span id="tag">{{this}}</span>
+            {{/each}}
+          </p>
+          <input name="" id="edit" type="button" value="Edit"/>
+          <input name="" id="delete" type="button" value="Delete"/>
+        </div>
+  </script>
+
+  <script id="contactList" type="text/x-handlebars">
+    {{#each contacts}}
+    {{> displayContact}}
+    {{/each}}
+  </script>
+
+  <script id="tagTemplate" type="text/x-handlebars-template">
+      Tags:
+      {{#each tags}}
+      <span id="tag">{{this}}</span>
+      {{/each}}
+  </script>
+
+  <script id="noResult" type="text/x-handlebars-template">
+    <div class="no-show">
+      <p>There is no contacts starting with
+        <em>{{input}}</em>
+      </p>
+    </div>
+  </script>
+
+  <script id="deleteTag" type="text/x-handlebars-template">
+    <input name="" type="button" value="delete"/>
+  </script>
+</html>

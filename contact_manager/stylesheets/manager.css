@@ -1,0 +1,220 @@
+@import url("whitespace-reset.css");
+/* header */
+header {
+    background-color: #5E4485;
+    width: auto;
+    height: 135px;
+}
+
+header h1 {
+    font-size: 32px;
+    padding-top: 30px;
+    text-align: center;
+    color: white;
+}
+
+header h3 {
+    font-size: 20px;
+    padding-top: 12px;
+    text-align: center;
+    color: #CDBFE0;
+}
+
+/* menu bar */
+
+section.menu {
+    background-color: #F5F5F5;
+    border: 1px solid #f3f3f3;
+    width: 75%;
+    height: 80px;
+    text-align: center;
+    margin: 0 auto;
+}
+
+.menu div {
+    display: inline-block;
+}
+
+.menu #add {
+    border-radius: 5px;
+    box-sizing: content-box;
+    color: #5E4485;
+    width: 135px;
+    height: 45px;
+    margin: 20px 15% 20px 10%;
+    border: 1px solid #5E4485;
+    text-transform: capitalize;
+    text-align: center;
+    vertical-align: middle;
+}
+
+#add:hover {
+    background-color:#563D7C;
+    color: #FFFFFF;
+}
+
+#add p {
+    margin: 15px 0 5px 0;
+    font-size: 18px;
+}
+
+.menu #search {
+    margin: 20px 10% 20px 10%;
+}
+
+#search input[type="search"] {
+    width: 150px;
+    height: 35px;
+    border: 1px solid #CCCCCC;
+    border-radius: 3px;
+}
+
+#tags {
+    display: block;
+}
+
+#tags span {
+    background-color: #CCCCCC;
+    padding: 2px;
+    border-radius: 5px;
+}
+
+
+/* add contact form */
+
+form#create {
+    display: none;
+    margin: 0 auto;
+    text-align: center;
+    width: 65%;
+    padding-bottom: 55px;
+    border-bottom: 1px solid #cccccc;
+}
+
+#create h4 {border-bottom: 1px solid #cccccc; padding: 40px 0 10px 0;
+    font-size: 28px;
+    font-weight: normal;
+}
+
+#create fieldset {
+    text-align: right;
+    padding-top: 25px;
+    margin-right: 200px;
+}
+
+
+#create label {
+    padding-right: 30px;
+    font-weight: bold;
+}
+
+#create input {
+    width: 550px;
+    box-sizing: border-box;
+    height: 32px;
+    border: 1px solid #CCCCCC;
+    border-radius: 3px;
+}
+
+#create input[type="button"] {
+    width: 260px;
+    height: 45px;
+    text-align: center;
+    border: 1px solid #5E4485;
+    border-radius: 10px;
+    vertical-align: bottom;
+    background-color: #ffffff;
+    color:#563D7C;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+#create input[type="button"]:hover {
+    background-color:#563D7C;
+    color: #ffffff;
+}
+
+fieldset input[type="button"]:first-child {
+    margin-right: 30px;
+}
+
+/* display contact */
+section.contact {
+    padding: 50px 0 70px 0;
+    margin: 0 auto;
+    width: 75%;
+    border-bottom: 1px solid #cccccc;
+    overflow: hidden;
+
+}
+
+.no-show {
+    box-sizing: border-box;
+    background-color: #F5F5F5;
+    margin: 0 auto;
+    padding: 40px 0;
+    text-align: center;
+    height: 95px;
+    width: 70%;
+    font-size: 28px;
+}
+
+/* display single user data */
+.display {
+    padding-bottom: 20px;
+    margin-right: 20px;
+    width: 20%;
+    border-bottom: 1px solid #cccccc;
+    float: left;
+}
+.display h4 {
+    font-weight: normal;
+    font-size: 25px;
+    padding-bottom:25px;
+}
+
+.display p:last-of-type span {
+    background-color: #cccccc;
+    padding: 3px;
+    border-radius: 5px;
+}
+
+.display input[type="button"] {
+    width: 60px;
+    height: 30px;
+    box-sizing: border-box;
+    border-radius: 3px;
+    margin-top: 25px;
+    border: 1px solid #5E4485;
+    background-color: #ffffff;
+    color:#563D7C;
+}
+
+
+.display input[type="button"]:hover,
+footer input[type="button"]:hover {
+    background-color:#563D7C;
+    color: #ffffff;
+}
+
+.display input[type="button"]:last-child {
+    margin-left: 20px;
+}
+
+/* footer info */
+
+footer {
+    text-align: center;
+    padding-top: 20px;
+}
+
+
+footer input[type="button"] {
+    width: 60px;
+    height: 15px;
+    box-sizing: border-box;
+    border-radius: 3px;
+    border: 1px solid #5E4485;
+    background-color: #ffffff;
+    color:#563D7C;
+}
